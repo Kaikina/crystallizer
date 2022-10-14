@@ -109,8 +109,8 @@ public class CrystallizerBlock extends BaseEntityBlock {
                          boolean isMoving) {
         if (state.getBlock() != newState.getBlock()) {
             BlockEntity blockEntity = level.getBlockEntity(pos);
-            if (blockEntity instanceof CrystallizerBlockEntity) {
-                ((CrystallizerBlockEntity) blockEntity).drops();
+            if (blockEntity instanceof CrystallizerBlockEntity crystallizerBlockEntity) {
+                crystallizerBlockEntity.drops();
             }
         }
         super.onRemove(state, level, pos, newState, isMoving);
