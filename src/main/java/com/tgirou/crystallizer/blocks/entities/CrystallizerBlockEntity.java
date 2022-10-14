@@ -166,9 +166,8 @@ public class CrystallizerBlockEntity extends BlockEntity implements MenuProvider
 
     public void drops() {
         SimpleContainer inventory = new SimpleContainer(itemStackHandler.getSlots());
-        for (int i = 0; i < itemStackHandler.getSlots(); i++) {
-            inventory.setItem(i, itemStackHandler.getStackInSlot(i));
-        }
+        inventory.setItem(0, itemStackHandler.getStackInSlot(1));
+        inventory.setItem(1, itemStackHandler.getStackInSlot(0));
 
         assert this.level != null;
         Containers.dropContents(this.level, this.worldPosition, inventory);
@@ -330,14 +329,6 @@ public class CrystallizerBlockEntity extends BlockEntity implements MenuProvider
     @Override
     public Packet<ClientGamePacketListener> getUpdatePacket() {
         return ClientboundBlockEntityDataPacket.create(this);
-    }
-
-    public SimpleContainer getInventory(CrystallizerBlockEntity entity) {
-        SimpleContainer inventory = new SimpleContainer(entity.itemStackHandler.getSlots());
-        for (int i = 0; i < entity.itemStackHandler.getSlots(); i++) {
-            inventory.setItem(i, entity.itemStackHandler.getStackInSlot(i));
-        }
-        return inventory;
     }
 
     public ItemStackHandler getItemStackHandler() {
