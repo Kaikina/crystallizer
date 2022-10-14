@@ -45,6 +45,7 @@ crystallizing your ore, the Crystallizer need to be Redstone powered. Once power
 Every ore as its own crystallizing time, as follows : 
 - Iron : 2 min
 - Copper : 2 min
+- Quartz : 2 min
 - Gold : 30 min
 - Diamond : 40 min
 - Emerald : 40 min
