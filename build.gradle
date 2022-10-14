@@ -19,7 +19,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'org.parchmentmc.librarian.forgegradle'
 
 
-version = '0.0.5-1.18.2'
+version = '0.0.1-1.18.2'
 group = 'com.tgirou.crystallizer' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'crystallizer'
 
@@ -68,7 +68,7 @@ minecraft {
             property 'forge.enabledGameTestNamespaces', 'crystallizer'
 
             mods {
-                skilled {
+                crystallizer {
                     source sourceSets.main
                 }
             }
@@ -85,7 +85,7 @@ minecraft {
             property 'forge.enabledGameTestNamespaces', 'crystallizer'
 
             mods {
-                skilled {
+                crystallizer {
                     source sourceSets.main
                 }
             }
@@ -113,7 +113,7 @@ minecraft {
             property 'forge.enabledGameTestNamespaces', 'crystallizer'
 
             mods {
-                skilled {
+                crystallizer {
                     source sourceSets.main
                 }
             }
@@ -130,7 +130,7 @@ minecraft {
             args '--mod', 'crystallizer', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
 
             mods {
-                skilled {
+                crystallizer {
                     source sourceSets.main
                 }
             }
