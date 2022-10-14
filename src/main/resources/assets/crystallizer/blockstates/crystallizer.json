@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "crystallizer:block/crystallizer"
+    },
+    "facing=south": {
+      "model": "crystallizer:block/crystallizer",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "crystallizer:block/crystallizer",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "crystallizer:block/crystallizer",
+      "y": 90
+    }
+  }
+}

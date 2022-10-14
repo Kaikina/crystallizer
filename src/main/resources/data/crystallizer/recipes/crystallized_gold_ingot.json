@@ -1,0 +1,8 @@
+{
+  "type": "crystallizer:crystallizer",
+  "ingredient": {
+    "item": "minecraft:gold_ingot"
+  },
+  "result": "minecraft:gold_ingot",
+  "crystallizingTime": 200
+}

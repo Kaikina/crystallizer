@@ -1,0 +1,8 @@
+{
+  "type": "crystallizer:crystallizer",
+  "ingredient": {
+    "item": "minecraft:quartz"
+  },
+  "result": "minecraft:quartz",
+  "crystallizingTime": 280
+}

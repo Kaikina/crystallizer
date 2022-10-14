@@ -1,0 +1,8 @@
+{
+  "type": "crystallizer:crystallizer",
+  "ingredient": {
+    "item": "minecraft:copper_ingot"
+  },
+  "result": "minecraft:copper_ingot",
+  "crystallizingTime": 200
+}
