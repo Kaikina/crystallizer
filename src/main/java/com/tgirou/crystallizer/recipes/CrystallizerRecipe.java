@@ -119,22 +119,6 @@ public class CrystallizerRecipe implements Recipe<SimpleContainer> {
             pBuffer.writeVarInt(pRecipe.crystallizingTime);
         }
 
-        @Override
-        public RecipeSerializer<?> setRegistryName(ResourceLocation name) {
-            return INSTANCE;
-        }
-
-        @Nullable
-        @Override
-        public ResourceLocation getRegistryName() {
-            return ID;
-        }
-
-        @Override
-        public Class<RecipeSerializer<?>> getRegistryType() {
-            return castClass();
-        }
-
         private static <G> Class<G> castClass()
         {
             return (Class<G>) RecipeSerializer.class;

@@ -4,7 +4,6 @@ import com.tgirou.crystallizer.api.util.Constants;
 import com.tgirou.crystallizer.blocks.ModBlocks;
 import com.tgirou.crystallizer.recipes.CrystallizerRecipe;
 import mezz.jei.api.constants.VanillaTypes;
-import mezz.jei.api.gui.IRecipeLayoutDrawable;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
 import mezz.jei.api.helpers.IGuiHelper;
@@ -13,8 +12,6 @@ import mezz.jei.api.recipe.RecipeIngredientRole;
 import mezz.jei.api.recipe.RecipeType;
 import mezz.jei.api.recipe.category.IRecipeCategory;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import org.jetbrains.annotations.NotNull;
@@ -38,7 +35,7 @@ public class CrystallizerRecipeCategory implements IRecipeCategory<CrystallizerR
 
     @Override
     public @NotNull Component getTitle() {
-        return new TranslatableComponent("block.crystallizer.crystallizer");
+        return Component.translatable("block.crystallizer.crystallizer");
     }
 
     @Override
@@ -55,15 +52,5 @@ public class CrystallizerRecipeCategory implements IRecipeCategory<CrystallizerR
     public void setRecipe(@NotNull IRecipeLayoutBuilder builder, @NotNull CrystallizerRecipe recipe, @NotNull IFocusGroup group) {
         builder.addSlot(RecipeIngredientRole.INPUT, 80, 17).addIngredients(recipe.getIngredients().get(0));
         builder.addSlot(RecipeIngredientRole.OUTPUT, 80, 53).addItemStack(recipe.getResultItem());
-    }
-
-    @Override
-    public ResourceLocation getUid() {
-        return CrystallizerRecipe.Serializer.ID;
-    }
-
-    @Override
-    public Class<? extends CrystallizerRecipe> getRecipeClass() {
-        return CrystallizerRecipe.class;
     }
 }

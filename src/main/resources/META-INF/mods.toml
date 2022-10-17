@@ -19,7 +19,7 @@ modId="crystallizer" #mandatory
 # The version number of the mod - there's a few well known ${} variables useable here or just hardcode it
 # ${file.jarVersion} will substitute the value of the Implementation-Version as read from the mod's JAR file metadata
 # see the associated build.gradle script for how to populate this completely automatically during a build
-version="0.0.1-1.18.2" #mandatory
+version="0.0.1-1.19.2" #mandatory
  # A display name for the mod
 displayName="Crystallizer" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification https://mcforge.readthedocs.io/en/latest/gettingstarted/autoupdate/
@@ -55,10 +55,10 @@ amount of it ! So don't break the block until it crystallizes the first item !
     modId="minecraft"
     mandatory=true
 # This version range declares a minimum of the current minecraft version up to but not including the next major version
-    versionRange="[1.18.2,1.19)"
+    versionRange="[1.19.2,1.20)"
     ordering="NONE"
     side="BOTH"
-[[dependencies.minecolonies]]
+[[dependencies.crystallizer]]
     modId="jei"
     mandatory=false
     versionRange="[${jei_version},)"

@@ -9,7 +9,6 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
@@ -27,7 +26,7 @@ import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.client.model.data.IModelData;
+import net.minecraftforge.client.model.data.ModelData;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.CapabilityItemHandler;
@@ -130,7 +129,7 @@ public class CrystallizerBlockEntity extends BlockEntity implements MenuProvider
 
     @Override
     public @NotNull Component getDisplayName() {
-        return new TranslatableComponent("block.crystallizer.crystallizer");
+        return Component.translatable("block.crystallizer.crystallizer");
     }
 
     @Nullable
@@ -175,7 +174,7 @@ public class CrystallizerBlockEntity extends BlockEntity implements MenuProvider
 
     @NotNull
     @Override
-    public IModelData getModelData() {
+    public ModelData getModelData() {
         return super.getModelData();
     }
 

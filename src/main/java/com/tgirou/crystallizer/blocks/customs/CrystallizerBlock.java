@@ -8,6 +8,7 @@ import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -129,7 +130,7 @@ public class CrystallizerBlock extends BaseEntityBlock {
                     );
                     player.getItemInHand(interactionHand).shrink(1);
                 } else {
-                    NetworkHooks.openGui(((ServerPlayer) player), entity, pos);
+                    NetworkHooks.openScreen(((ServerPlayer) player), entity, pos);
                 }
             } else {
                 throw new IllegalStateException("Our Container provider is missing!");
@@ -154,7 +155,7 @@ public class CrystallizerBlock extends BaseEntityBlock {
     }
 
     @Override
-    public void animateTick(BlockState pState, @NotNull Level pLevel, @NotNull BlockPos pPos, @NotNull Random pRand) {
+    public void animateTick(BlockState pState, @NotNull Level pLevel, @NotNull BlockPos pPos, @NotNull RandomSource pRand) {
         if (Boolean.TRUE.equals(pState.getValue(LIT)) && Boolean.TRUE.equals(pState.getValue(POWERED))) {
             double d0 = pPos.getX() + 0.5D;
             double d1 = pPos.getY() + 0.4D;

@@ -62,19 +62,19 @@ public class CrystallizerMenu extends AbstractContainerMenu {
     }
 
     public ResourceLocation getGUI() {
-        ResourceLocation itemRegistryName = blockEntity.getItemStackHandler().getStackInSlot(2).getItem().getRegistryName();
+        String itemRegistryName = blockEntity.getItemStackHandler().getStackInSlot(2).getItem().getDescriptionId();
         if (itemRegistryName != null ) {
-            if (itemRegistryName.getPath().equals("iron_ingot")) {
+            if (itemRegistryName.equals("item.minecraft.iron_ingot")) {
                 return new ResourceLocation(Constants.MOD_ID, "textures/gui/crystallizer_iron.png");
-            } else if (itemRegistryName.getPath().equals("copper_ingot")) {
+            } else if (itemRegistryName.equals("item.minecraft.copper_ingot")) {
                 return new ResourceLocation(Constants.MOD_ID, "textures/gui/crystallizer_copper.png");
-            } else if (itemRegistryName.getPath().equals("diamond")) {
+            } else if (itemRegistryName.equals("item.minecraft.diamond")) {
                 return new ResourceLocation(Constants.MOD_ID, "textures/gui/crystallizer_diamond.png");
-            } else if (itemRegistryName.getPath().equals("emerald")) {
+            } else if (itemRegistryName.equals("item.minecraft.emerald")) {
                 return new ResourceLocation(Constants.MOD_ID, "textures/gui/crystallizer_emerald.png");
-            } else if (itemRegistryName.getPath().equals("gold_ingot")) {
+            } else if (itemRegistryName.equals("item.minecraft.gold_ingot")) {
                 return new ResourceLocation(Constants.MOD_ID, "textures/gui/crystallizer_gold.png");
-            } else if (itemRegistryName.getPath().equals("quartz")) {
+            } else if (itemRegistryName.equals("item.minecraft.quartz")) {
                 return new ResourceLocation(Constants.MOD_ID, "textures/gui/crystallizer_quartz.png");
             }
         }
